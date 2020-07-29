@@ -15,6 +15,8 @@ if (isset($_POST['submit-login'])){
     }
 
     if (checkPassword($username, $password) === TRUE){
+        session_start();
+        $_SESSION['username'] = ucwords($username);
         header("Location: ../index.php?msg=welcome&username=".$username);;
         exit();
     } else {

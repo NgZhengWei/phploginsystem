@@ -49,3 +49,41 @@
         }
     }
 }
+
+.alert {
+    display: block;
+    width: 100%;
+    border: 0px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+    &.alert-primary {
+        background-color: $primary-color;
+    }
+    &.alert-secondary {
+        background-color: $secondary-color;
+    }
+    &.alert-accent {
+        background-color: $accent-color;
+    }
+}
+
+@for $i from 1 through 5 {
+    .mx-#{$i} {
+        margin: 0 #{$i}rem;
+    }
+
+    .my-#{$i} {
+        margin: #{$i}rem 0;
+    }
+
+    .mr-#{$i} {
+        margin: 0 #{$i}rem 0 0;
+    }
+
+    .ml-#{$i} {
+        margin: 0 0 0 #{$i}rem;
+    }
+}
